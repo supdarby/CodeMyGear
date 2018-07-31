@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lisa Leslie</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+
+<style>
+.gallery {
+  background: #eee;
+  width: 500px;
+  margin: 1em auto;
+}
+.gallery img {
+  max-width: 100%;
+  height: auto;
+}
+.gallery .hero {
+  padding: 1em;
+}
+.gallery .thumbs {
+  background: #ddd;
+  padding: 1em;
+  text-align: center;
+}
+.gallery .thumbs img {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+.gallery .active {
+  opacity: 0.5;
+}
+.galleryHeader {
+  padding-left: 40%;
+}
+</style>
+
+
+<div class="galleryHeader">
+  <h1>Gallery</h1>
+</div>
+<div class="gallery">
+  <div class="hero"></div>
+  <div class="thumbs"></div>
+</div>
+
+<!-- DO NOT WORK ABOVE THIS -->
+
+<script>
+// the images variable is an array of images to be in your gallery.
+// add 4 images to this array to be displayed
+var images = [
+  'https://efemeridesdoefemello.files.wordpress.com/2017/06/21jun17.jpg',
+  'https://i.pinimg.com/originals/fa/38/67/fa38671b5d8bfb3c32b6a094917c00fd.jpg',
+  'https://i.pinimg.com/originals/3a/bb/87/3abb87248a9c6166aab83e5511f67b0c.jpg',
+  'https://i.pinimg.com/736x/f2/56/c1/f256c17987e97621129e016662991b2b--basketball-legends-girls-basketball.jpg'
+];
+
+// galleryBox is the div with a class of gallery
+// find the div and set the variable to the DOM Element
+var galleryBox = document.querySelector('.gallery');
+
+// heroImage is setting up a template to be placed as your hero image
+// we're using the images array and grabbing the first image (ie. 0th place)
+var heroImage = `<img src="${images[0]}" />`;
+
+
+// thumbs is a blank variable right now
+// you need to:
+  // loop through your images
+  // make a template of an image tag
+  // set the src of the img tag to the current image you're looping over
+  // add that image to the thumbs variable (thumbs += template)
+var thumbs = ""; //use map to loop through images and return a template literal for each image (similar to line 55)
+images.forEach(function(image) {
+  var newImage = `<img src="${image}" />`;
+  thumbs += newImage;
+})
+// find the hero div using querySelector()
+// set the innerHTML to your heroImage template
+var hero = document.querySelector('.hero');
+hero.innerHTML = heroImage;
+// innerHTML is a property of hero (a DOM element)
+
+// find the thumbs div using querySelector()
+// set the innerHTML to your thumbs template
+var thumbsDiv = document.querySelector('.thumbs');
+thumbsDiv.innerHTML = thumbs;
+
+// add an an event listener on the galleryBox div
+// use a 'click' listener
+// in the function that handles the click:
+  // create a variable for a new image template
+  // set the src of the image to the src of the thumbnail you clicked on (hint use event variable)
+  // find the hero div with querySelector()
+  // set the innerHTML of that div to be equal to your new hero template
+galleryBox.addEventListener("click", function() {
+  if (event.target.src){
+  var newImage = `<img src="${event.target.src}" />`;
+  hero.innerHTML = newImage
+  }
+
+});
+
+
+
+// THAT'S IT! go to your page and test it out!
+// Build on this and implement it to your own site.
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+
+body {
+  background-color: white;
+  font-family: helvetica;
+}
+h1 {
+  color: orange;
+  font-size: 70px;
+}
+h2,h3,h4,h5,h6 {
+  color: black;
+}
+h2, p {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+ul {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+a {
+  color: pink;
+}
+a:hover {
+  color: lightblue;
+}
+ul {
+  list-style: none;
+}
+li {
+  margin-bottom: 10px;
+}
+p,li {
+  color: darkgrey;
+}
+.masthead {
+  background-image: url(http://www.kosarkarskiklub-rogaska.si/wp-content/uploads/2017/06/thumb-1920-344223.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+.masthead p {
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 0;
+}
+.masthead h1 {
+  margin-bottom: 0;
+  background: rgba(0,0,0,0.5);
+}
