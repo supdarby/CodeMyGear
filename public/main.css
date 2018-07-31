@@ -6,6 +6,7 @@ body {
 h1 {
   color: orange;
   font-size: 70px;
+  font-family: 'Abril Fatface', cursive;
 }
 h2,h3,h4,h5,h6 {
   color: black;
@@ -41,28 +42,36 @@ p,li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 550px;
 }
 .masthead p {
+  margin-bottom: auto;
   color: white;
   background: rgba(0,0,0,0.5);
   padding: 0;
+  font-family: 'Abril Fatface', cursive;
 }
 .masthead h1 {
   margin-bottom: 0;
   background: rgba(0,0,0,0.5);
 }
 nav {
+  margin-bottom: auto;
+  text-align: right;
   width: 100%; //width should be a percentage for responsiveness
   height: 38px; //height should be px. Adjust to your liking
   background-color: #0b98de;//hex color code should be used
 }
 nav a {
-  display: block;
-  float: left;
-  font-family: sans-serif;
-  font-size: 9px;
+  display: inline-block;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 16px;
   color: white;
+  padding-top: 1px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  text-decoration: none;
 }
 nav a:hover {
 }
