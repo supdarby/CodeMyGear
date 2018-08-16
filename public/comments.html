@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Comments</title>
-  <link rel="stylesheet" href="./main.css">
-</head>
-<body>
-  <ul id="comments"></ul>
-  <textarea id="message" placeholder="Comment"></textarea><br>
-  <input id="email" placeholder="E-Mail" type="email"><br>
-  <button id="submit" onclick="postComment()">Submit</button>
-  <script src="./main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Comments</title>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+  </head>
+  <body>
+    <div class="not-homepage-nav">
+      <nav>
+        <a href="./index.html" href="#">HOME</a>
+        <a href="./legacy.html">THE LISA LEGACY</a>
+        <a href="./achievements.html">ACHIEVEMENTS</a>
+        <a href="./comments.html">GUEST BOOK</a>
+      </nav>
+    </div>
+    <ul id="comments"></ul>
+    <textarea id="message" placeholder="Comment"></textarea><br>
+    <input id="email" placeholder="E-Mail" type="email"><br>
+    <button id="submit" onclick="postComment()">Submit</button>
+    <script src="./main.js"></script>
+  </body>
 </html>

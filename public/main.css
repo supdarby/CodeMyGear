@@ -73,6 +73,9 @@ nav a {
   padding-left: 10px;
   text-decoration: none;
 }
+.not-homepage-nav {
+  background-color: black;
+}
 nav a:hover {
 }
 #logo {
