@@ -4,6 +4,7 @@ body {
   font-family: helvetica;
 }
 h1 {
+  margin: 15px;
   color: orange;
   font-size: 70px;
   font-family: 'Abril Fatface', cursive;
@@ -79,4 +80,53 @@ nav a {
 nav a:hover {
 }
 #logo {
+}
+.gallery {
+  background: #eee;
+  width: 500px;
+  margin: 1em auto;
+}
+.gallery img {
+  max-width: 100%;
+  height: auto;
+}
+.gallery .hero {
+  padding: 1em;
+}
+.gallery .thumbs {
+  background: #ddd;
+  padding: 1em;
+  text-align: center;
+}
+.gallery .thumbs img {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+.gallery .active {
+  opacity: 0.5;
+}
+.galleryHeader {
+  padding-left: 40%;
+}
+.flex-container {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: row;
+  padding: 15px;
+}
+.flex-content-1 {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+}
+.flex-content-2 {
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+}
+.awards {
+  padding-left: 0px;
+  font-size: 12px;
 }

@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Lisa Leslie's Achievements</title>
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
-
   <link rel="stylesheet" href="./main.css">
 </head>
  <body>
@@ -16,31 +15,97 @@
         <a href="./comments.html">GUEST BOOK</a>
       </nav>
     </div>
-    <h2>The Fame</h2>
-    <p>At 14, before Leslie had even started high school, she had received more than 100 college recruiting letters. Continuing her takeover, she was her high school team's leading scorer and rebounder and led them to the California state championship during her Junior and Senior year. Between those two years, she was invited to participate on the USA's Junior World Championship team. Going into college, Leslie was the top recruit in the country. In her four years at USC, she set the conference record for scoring, rebounding, and blocked shots. Capping out her college career with the Naismith College Player of the Year award, Leslie goes down in history as one of the greatest to ever play at USC. In 2001, she was the first WNBA player to win the <a href="#Regular">*Regular Season MVP</a>, the <a href="#All">*All-Star Game MVP</a> and the <a href="#Playoff">*Playoff MVP</a> in the same season. Lisa also led the Los Angeles Sparks to two back-to-back WNBA Championships (2001, 2002). Lisa won 4 Olympic Gold medals and was the first woman in the WNBA to make a slam-dunk during an official game.
-    </p>
-    <ul>
-      <li><strong>*Regular Season MVP:</strong> Awarded to the athlete who consistently played the best throughout the entire season.</li>
-      <li><strong>*All-Star Game MVP:</strong> Awarded for the best perfomance in the WNBA All-Star Game.</li>
-      <li><strong>*Playoff MVP:</strong> Awarded to the athlete who played the best during the Playoffs.</li>
-    </ul>
-  <h1>Achievements</h1>
-  <p>
-    <ul>
-      <li>1989	Named to USA Today 's high school All-American first team</li>
-      <li>1989	Competes with U.S. women's Junior World Championship team</li>
-      <li>1990	Awarded Naismith and Dial awards</li>
-      <li>1991	National and Pac-10 Freshman of the Year honors</li>
-      <li>1991-94	Named to All-Pac-10 first team</li>
-      <li>1992-94	Named All-American</li>
-      <li>1993	Named Female Athlete of the Year by USA Basketball</li>
-      <li>1994	Qualifies for U.S. women's national team</li>
-      <li>1994	Wins gold medal at Goodwill Games and bronze at World Women's Basketball Championships</li>
-      <li>1996	Qualifies for U.S. Olympic team and leads team to gold medal</li>
-      <li>2001	Leads L.A. to first WNBA title and named tournament MVP</li>
-      <li>2002	Leads L.A. to second WNBA title</li>
-      <li>2002	Named regular season, All-Star and tournament MVP</li>
-    </ul>
-  </p>
- </body>
+    <div class="flex-container">
+      <div class="flex-content-2">
+        <h1>Achievements</h1>
+        <p>
+          <ul class="achievements">
+            <li>1989	Named to USA Today 's high school All-American first team</li>
+            <li>1989	Competes with U.S. women's Junior World Championship team</li>
+            <li>1990	Awarded Naismith and Dial awards</li>
+            <li>1991	National and Pac-10 Freshman of the Year honors</li>
+            <li>1991-94	Named to All-Pac-10 first team</li>
+            <li>1992-94	Named All-American</li>
+            <li>1993	Named Female Athlete of the Year by USA Basketball</li>
+            <li>1994	Qualifies for U.S. women's national team</li>
+            <li>1994	Wins gold medal at Goodwill Games and bronze at World Women's Basketball Championships</li>
+            <li>1996	Qualifies for U.S. Olympic team and leads team to gold medal</li>
+            <li>2001	Leads L.A. to first WNBA title and named tournament MVP</li>
+            <li>2002	Leads L.A. to second WNBA title</li>
+            <li>2002	Named regular season, All-Star and tournament MVP</li>
+          </ul>
+        </p>
+      </div>
+      <div class="flex-content-2">
+        <div class="gallery">
+          <div class="hero"></div>
+          <div class="thumbs"></div>
+        </div>
+        
+        <!-- DO NOT WORK ABOVE THIS -->
+        
+        <script>
+        // the images variable is an array of images to be in your gallery.
+        // add 4 images to this array to be displayed
+        var images = [
+          'https://efemeridesdoefemello.files.wordpress.com/2017/06/21jun17.jpg',
+          'https://i.pinimg.com/originals/fa/38/67/fa38671b5d8bfb3c32b6a094917c00fd.jpg',
+          'https://i.pinimg.com/originals/3a/bb/87/3abb87248a9c6166aab83e5511f67b0c.jpg',
+          'https://i.pinimg.com/736x/f2/56/c1/f256c17987e97621129e016662991b2b--basketball-legends-girls-basketball.jpg'
+        ];
+        
+        // galleryBox is the div with a class of gallery
+        // find the div and set the variable to the DOM Element
+        var galleryBox = document.querySelector('.gallery');
+        
+        // heroImage is setting up a template to be placed as your hero image
+        // we're using the images array and grabbing the first image (ie. 0th place)
+        var heroImage = `<img src="${images[0]}" />`;
+        
+        
+        // thumbs is a blank variable right now
+        // you need to:
+          // loop through your images
+          // make a template of an image tag
+          // set the src of the img tag to the current image you're looping over
+          // add that image to the thumbs variable (thumbs += template)
+        var thumbs = ""; //use map to loop through images and return a template literal for each image (similar to line 55)
+        images.forEach(function(image) {
+          var newImage = `<img src="${image}" />`;
+          thumbs += newImage;
+        })
+        // find the hero div using querySelector()
+        // set the innerHTML to your heroImage template
+        var hero = document.querySelector('.hero');
+        hero.innerHTML = heroImage;
+        // innerHTML is a property of hero (a DOM element)
+        
+        // find the thumbs div using querySelector()
+        // set the innerHTML to your thumbs template
+        var thumbsDiv = document.querySelector('.thumbs');
+        thumbsDiv.innerHTML = thumbs;
+        
+        // add an an event listener on the galleryBox div
+        // use a 'click' listener
+        // in the function that handles the click:
+          // create a variable for a new image template
+          // set the src of the image to the src of the thumbnail you clicked on (hint use event variable)
+          // find the hero div with querySelector()
+          // set the innerHTML of that div to be equal to your new hero template
+        galleryBox.addEventListener("click", function() {
+          if (event.target.src){
+          var newImage = `<img src="${event.target.src}" />`;
+          hero.innerHTML = newImage
+          }
+        
+        });
+        
+        
+        
+        // THAT'S IT! go to your page and test it out!
+        // Build on this and implement it to your own site.
+        </script>
+      </div>
+    </div>
+  </body>
 </html>
